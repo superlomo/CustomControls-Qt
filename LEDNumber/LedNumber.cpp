@@ -56,6 +56,12 @@ void LEDNumber::setFontSize(int size)
 }
 
 //**********************************************  绘制部分 ****************************************
+void LEDNumber::resizeEvent(QResizeEvent *event)
+{
+    //计算绘制区域
+    caculateArea();
+}
+
 void LEDNumber::paintEvent(QPaintEvent *event)
 {
     Q_UNUSED(event)
@@ -63,7 +69,7 @@ void LEDNumber::paintEvent(QPaintEvent *event)
     painter.setRenderHint(QPainter::Antialiasing);
 
     //计算绘制区域
-    caculateArea();
+//    caculateArea();
     //绘制背景
     drawBack(painter);
     //绘制文字

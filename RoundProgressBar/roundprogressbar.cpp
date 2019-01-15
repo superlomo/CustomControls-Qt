@@ -121,11 +121,8 @@ void RoundProgressBar::setPrecision(int precision)
 }
 
 //********************************************** 内部绘制部分 ****************************************
-void RoundProgressBar::paintEvent(QPaintEvent *)
+void RoundProgressBar::resizeEvent(QResizeEvent *event)
 {
-    QPainter painter(this);
-    painter.setRenderHint(QPainter::Antialiasing);
-
     //根据内外圈宽度设置控件最小大小
     if(_outterBarWidth>_innerBarWidth)
         this->setMinimumSize(_outterBarWidth*8,_outterBarWidth*8);
@@ -133,6 +130,13 @@ void RoundProgressBar::paintEvent(QPaintEvent *)
         this->setMinimumSize(_innerBarWidth*8,_innerBarWidth*8);
     //计算绘制正方形区域信息
     caculateSquare();
+}
+
+void RoundProgressBar::paintEvent(QPaintEvent *)
+{
+    QPainter painter(this);
+    painter.setRenderHint(QPainter::Antialiasing);
+
     //绘制外圈
     paintOutterBar(painter);
     //绘制内圈

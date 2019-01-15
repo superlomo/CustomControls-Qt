@@ -37,6 +37,13 @@ MainWindow::MainWindow(QWidget *parent) :
     timer.start();
 
     //********************** Loading *************************
+    loading1=new Loading(this);
+    loading1->start();
+    ui->gridLayout_2->addWidget(loading1,0,0);
+
+//    loading2=new Loading(this);
+//    loading2->start();
+//    ui->gridLayout_2->addWidget(loading2,0,1);
 }
 
 MainWindow::~MainWindow()

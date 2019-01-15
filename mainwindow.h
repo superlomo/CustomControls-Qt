@@ -32,6 +32,9 @@ private:
     LEDNumber* num1;
     LEDNumber* num2;
     QTimer timer;
+    //********************************
+    Loading* loading1;
+    Loading* loading2;
 
 private slots:
     void setText();

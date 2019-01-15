@@ -28,13 +28,19 @@ SOURCES += \
         mainwindow.cpp \
     LEDNumber/LedNumber.cpp \
     Loading/Loading.cpp \
-    RoundProgressBar/roundprogressbar.cpp
+    RoundDot/RoundDot.cpp \
+    RoundProgressBar/roundprogressbar.cpp \
+    SelfAdaptableLabel/SelfAdaptableLabel.cpp
 
 HEADERS += \
         mainwindow.h \
+    CustomLineEdit/CustomLineEdit.h \
+    CustomLineEdit/LineEditpart.h \
     LEDNumber/LedNumber.h \
     Loading/Loading.h \
-    RoundProgressBar/roundprogressbar.h
+    RoundDot/RoundDot.h \
+    RoundProgressBar/roundprogressbar.h \
+    SelfAdaptableLabel/SelfAdaptableLabel.h
 
 FORMS += \
         mainwindow.ui

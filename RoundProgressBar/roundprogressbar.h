@@ -70,6 +70,7 @@ public:
 
 protected:
     void paintEvent(QPaintEvent *);
+    void resizeEvent(QResizeEvent *event);
 
 private:
     //起始角度 范围0-360
